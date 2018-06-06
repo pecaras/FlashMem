@@ -11,7 +11,7 @@ namespace flashmem {
 	*/
 	//% advanced=false weight=10
 	//% blockId=setByte block="save %name %value"
-	//% blockExternalInputs=2 weight=90 blockGap=8 shim=flashmem::setByte
+	//% blockExternalInputs=2 weight=90 blockGap=8 shim=flashmem::fmsetByte
 	export function setByte(name: string, value: number) {	
           flashmem.fmsetByte(name, value);
    	}
@@ -24,7 +24,7 @@ namespace flashmem {
 	*/
 	//% advanced=false weight=10
 	//% blockId=getByte block="get %name"
-	//% blockExternalInputs=1 weight=90 blockGap=8 shim=flashmem::getByte
+	//% blockExternalInputs=1 weight=90 blockGap=8 shim=flashmem::fmgetByte
 	export function getByte(name: string): number {
 	  return flashmem.fmgetByte(name);
 	}
