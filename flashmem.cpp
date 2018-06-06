@@ -12,25 +12,12 @@ namespace flashmem
 {    
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 /**
-* Guarda un valor
-* @param name nom variable
-* @param valor de variable
-*/
-//% advanced=true weight=10
-//% blockId="setString" block="save string value"
-void setString(StringData* name, StringData* value) {
-    ManagedString n(name);
-    ManagedString v(value);
-    uBit.storage.put(n.toCharArray(), (uint8_t *)v.toCharArray(), v.length());
-}
-
-/**
 * Guarda un byte
 * @param name nom variable
 * @param valor (un byte)
 */
 //% advanced=true weight=10
-//% blockId="setByte" block="save byte value"
+//% blockId=fm_setByte block="save name|name %name|= %value"
 void fmsetByte(StringData* name, int value) {
     ManagedString n(name);
     uBit.storage.put(n.toCharArray(), (uint8_t *)&value, sizeof(int));
@@ -42,7 +29,7 @@ void fmsetByte(StringData* name, int value) {
 * @param valor de variable
 */
 //% advanced=true weight=10
-//% blockId="getByte" block="get byte value"
+//% blockId=fm_getByte block="get %name"
 int fmgetByte(StringData* name) {
     ManagedString n(name);
     KeyValuePair* nomvalor = uBit.storage.get(n.toCharArray());
