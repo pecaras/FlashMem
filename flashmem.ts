@@ -13,7 +13,8 @@ namespace flashmem {
 	//% blockId=setByte block="save %name %value"
 	//% blockExternalInputs=2 weight=90 blockGap=8 shim=flashmem::fmsetByte
 	export function setByte(name: string, value: number) {	
-          flashmem.fmsetByte(name, value);
+          //flashmem.fmsetByte(name, value);
+	  console.log("Entra a setByte:")
    	}
 
 
@@ -26,7 +27,9 @@ namespace flashmem {
 	//% blockId=getByte block="get %name"
 	//% blockExternalInputs=1 weight=90 blockGap=8 shim=flashmem::fmgetByte
 	export function getByte(name: string): number {
-	  return flashmem.fmgetByte(name);
+	  //return flashmem.fmgetByte(name);
+          console.log("Entra a getByte:")
+	  return 0
 	}
 	
 }
