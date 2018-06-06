@@ -13,7 +13,7 @@ declare namespace flashmem {
      * @param valor (un byte)
      */
     //% advanced=true weight=10
-    //% blockId=fm_setByte block="save name|name %name|= %value" shim=flashmem::fmsetByte
+    //% blockId=fmsetByte block="save name|name %name|= %value" shim=flashmem::fmsetByte
     function fmsetByte(name: string, value: number): void;
 
     /**
@@ -22,7 +22,7 @@ declare namespace flashmem {
      * @param valor de variable
      */
     //% advanced=true weight=10
-    //% blockId=fm_getByte block="get %name" shim=flashmem::fmgetByte
+    //% blockId=fmgetByte block="get %name" shim=flashmem::fmgetByte
     function fmgetByte(name: string): number;
 }
 
