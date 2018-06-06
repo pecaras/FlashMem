@@ -1,6 +1,6 @@
 {
     "name": "FlashMem",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Load/Save flash memory",
     "license": "MIT",
     "dependencies": {
