@@ -18,8 +18,10 @@ namespace FlashMem
 */
 //% advanced=true weight=10
 //% blockId="setString" block="save string value"
-void setString(ManagedString name, ManagedString value) {
-    uBit.storage.put(name.toCharArray(), (uint8_t *)value.toCharArray(), value.length());
+void setString(StringData* name, StringData* value) {
+    ManagedString n(name);
+    ManagedString v(value);
+    uBit.storage.put(n.toCharArray(), (uint8_t *)v.toCharArray(), v.length());
 }
 
 /**
@@ -29,8 +31,9 @@ void setString(ManagedString name, ManagedString value) {
 */
 //% advanced=true weight=10
 //% blockId="setByte" block="save byte value"
-void setByte(ManagedString name, int value) {
-    uBit.storage.put(name.toCharArray(), (uint8_t *)&value, sizeof(int));
+void fmsetByte(StringData* name, int value) {
+    ManagedString n(name);
+    uBit.storage.put(n.toCharArray(), (uint8_t *)&value, sizeof(int));
 }
 
 /**
@@ -40,8 +43,9 @@ void setByte(ManagedString name, int value) {
 */
 //% advanced=true weight=10
 //% blockId="getByte" block="get byte value"
-int getByte(ManagedString name) {
-    KeyValuePair* nomvalor = uBit.storage.get(name.toCharArray());
+int fmgetByte(StringData* name) {
+    ManagedString n(name);
+    KeyValuePair* nomvalor = uBit.storage.get(n.toCharArray());
     int resultat;
     memcpy(&resultat, nomvalor->value, sizeof(int));
     return resultat;
