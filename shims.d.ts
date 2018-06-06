@@ -5,7 +5,7 @@
      * Flash Memory operations
      */
     //% weight=5 color=#002050 icon="\uf0a0"
-declare namespace FlashMem {
+declare namespace flashmem {
 
     /**
      * Guarda un valor
@@ -13,7 +13,7 @@ declare namespace FlashMem {
      * @param valor de variable
      */
     //% advanced=true weight=10
-    //% blockId="setString" block="save string value" shim=FlashMem::setString
+    //% blockId="setString" block="save string value" shim=flashmem::setString
     function setString(name: string, value: string): void;
 
     /**
@@ -22,7 +22,7 @@ declare namespace FlashMem {
      * @param valor (un byte)
      */
     //% advanced=true weight=10
-    //% blockId="setByte" block="save byte value" shim=FlashMem::fmsetByte
+    //% blockId="setByte" block="save byte value" shim=flashmem::fmsetByte
     function fmsetByte(name: string, value: number): void;
 
     /**
@@ -31,7 +31,7 @@ declare namespace FlashMem {
      * @param valor de variable
      */
     //% advanced=true weight=10
-    //% blockId="getByte" block="get byte value" shim=FlashMem::fmgetByte
+    //% blockId="getByte" block="get byte value" shim=flashmem::fmgetByte
     function fmgetByte(name: string): number;
 }
 

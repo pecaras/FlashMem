@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-declare namespace FlashMem {
+declare namespace flashmem {
 }
 
 // Auto-generated. Do not edit. Really.

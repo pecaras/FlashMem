@@ -8,7 +8,7 @@ using namespace pxt;
 * Flash Memory operations
 */
 //% weight=5 color=#002050 icon="\uf0a0"
-namespace FlashMem
+namespace flashmem
 {    
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 /**
