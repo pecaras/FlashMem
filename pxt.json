@@ -1,0 +1,20 @@
+{
+    "name": "FlashMem",
+    "version": "0.1.0",
+    "description": "Load/Save flash memory",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "flashmem.cpp",
+        "flashmem.ts",
+        "shims.d.ts",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "tests.ts"
+    ],
+    "public": true
+}
